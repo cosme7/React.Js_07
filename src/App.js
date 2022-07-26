@@ -1,25 +1,61 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {Component} from "react";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+export default class App extends Component{
+
+  state = {
+    numberOne: "",
+    numberTwo: "",
+    result: "",
+  }
+
+  soma = () => {
+    this.setState ({
+      result: this.state.numberOne + this.state.numberTwo
+    })
+  }
+
+  less = () => {
+    this.setState ({
+      result: this.state.numberOne - this.state.numberTwo
+    })
+  }
+
+  multi = () => {
+    this.setState ({
+      result: this.state.numberOne * this.state.numberTwo
+    })
+  }
+
+  div = () => {
+    this.setState ({
+      result: this.state.numberOne / this.state.numberTwo
+    })
+  }
+
+  clear = () => {
+    this.setState ({
+      result: "0"
+    })
+  }
+
+  handleChangeOne = (e) => {
+    this.setState ({
+      numberOne: e.target.value
+    })
+  }
+
+  handleChangeTwo = (e) => {
+    this.setState ({
+      numberTwo: e.target.value
+    })
+  }
+
+  render(){
+    return(
+      <div>
+        <h1>OLÁ</h1>
+      </div>
+    )
+  }
 }
-
-export default App;
