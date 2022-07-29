@@ -1,17 +1,15 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 import background from "./background.png";
+import "./App.css";
 
 export const Wrapper = styled.section`
 
   width: 100%;
-  height: 98vh;
+  height: 100vh;
   background-color: black;
   display: flex;
   align-items: center;
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
 `;
 
 export const Calc = styled.section`
